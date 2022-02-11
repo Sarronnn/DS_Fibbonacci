@@ -12,12 +12,14 @@ public class hw1_test {
 	@Test
 	public void test_fibonacci1() {
 		assertTrue(hw1.fibonacci(1) ==  1);
-		assertFalse(hw1.fibonacci(1) ==  3);		
+		assertFalse(hw1.fibonacci(1) ==  3);
+		assertTrue(hw1.fibonacci(3) == 2);
 	}
 
 	@Test
 	public void test_fibonacci2() {
 		assertTrue(hw1.fibonacci(60) ==  1820529360);
+		assertTrue(hw1.fibonacci(10) == 55);
 	}
 	
 	@Test

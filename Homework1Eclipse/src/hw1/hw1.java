@@ -11,9 +11,19 @@ class hw1{
 	 * @return The num'th fibonacci number
 	 */
 	public static int fibonacci(int num) {
-		// TODO 
-		return 0;
+		
+		if (num == 1){;
+			return 1;
+		}
+		if (num == 2){
+			return 1;
+		}
+		else{
+			return fibonacci(num - 1) + fibonacci(num - 2);
+			
+		}
 	}
+	
 	
 	
 	/**
@@ -29,8 +39,17 @@ class hw1{
 	 * @return Sorted version of stringToSort
 	 */
 	public static String sorter(String stringToSort) {
-		// TODO
-		return stringToSort;	
+		//if (stringToSort = "" != null) {
+		new String sorts = stringToSort.charAt(0);
+		for (int i = 0; i< stringToSort.length(); i++)  {
+			if (stringToSort.charAt(i) < stringToSort.charAt(i + 1) {
+				sorts.charAt(i) = stringToSort.charAt(i);
+			else
+				sorts.charAt(i + 1) = stringToSort.charAt(i + 1);
+			
+		
+		
+		return sorts;	
 	}
 	
 
@@ -63,7 +82,15 @@ class hw1{
 	 * @return Return our input string but in pig latin
 	 */
 	public static String pigLatin(String sentence) {
-		// TODO
+		//String vowels = "aeiou";
+		for (int i = 0; i < sentence.length(); i++) {
+		if (sentence.charAt(i) && sentence.charAt(i + 1) == "a" || "e" || "i" || "o" || "u") {
+			new String sent = sentence
+			sent
+			}
+				
+			
+		}
 		return sentence;
 	}
 	
@@ -79,8 +106,15 @@ class hw1{
 	 *  @return True if the array has a triple, otherwise false
 	 */
 	public static boolean hasTriple(int[] arr) {
-		// TODO
-		return false;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == arr[i + 1] && arr[i] == arr[i + 2]) {
+				i++;
+				return true;
+			else {
+				return false;
+	}
+			}
+	}
 	}
 	
 	/** 
