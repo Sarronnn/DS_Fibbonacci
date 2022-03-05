@@ -18,6 +18,7 @@ class hw1{
 		if (num == 2){
 			return 1;
 		}
+// >>> [NL] These if statements can be combined to be one else if using `||`. (-1)
 		else{
 			return fibonacci(num - 1) + fibonacci(num - 2);
 			
@@ -40,6 +41,7 @@ class hw1{
 	 */
 	public static String sorter(String stringToSort) {
 		//if (stringToSort = "" != null) {
+// >>> [NL] Don't leave commented-out code in your final submission! (-1)
 		new String sorts = stringToSort.charAt(0);
 		for (int i = 0; i< stringToSort.length(); i++)  {
 			if (stringToSort.charAt(i) < stringToSort.charAt(i + 1) {
@@ -85,17 +87,21 @@ class hw1{
 		//String vowels = "aeiou";
 		for (int i = 0; i < sentence.length(); i++) {
 		if (sentence.charAt(i) && sentence.charAt(i + 1) == "a" || "e" || "i" || "o" || "u") {
+// >>> [NL] You can't check if something equals multiple things the way you can in Python.
+// You need to set it equal in each || statement. (No point deduction)
 			new String sent = sentence
 			sent
 			}
 				
 			
+// >>> [NL] Please make sure your final submission compiles!
 		}
 		return sentence;
 	}
 	
 	
 	
+// >>> [NL] Be consistent about the number of new lines between methods. (-1)
 	
 	
 	/** 
@@ -116,6 +122,7 @@ class hw1{
 			}
 	}
 	}
+// >>> [NL] Make sure your brackets line up. (-1)
 	
 	/** 
 	 * Given a num greater than 1, return true if that number is prime, otherwise return false
@@ -128,8 +135,24 @@ class hw1{
 	 */
 	public static boolean isPrime(int num) {
 		// TODO
+// >>> [NL] Don't leave TODO comments in your final submission! (-1)
 		return false;
 	}
 	
 	
 }
+// ===================================================
+// >>> [NL] Summary
+// ---------------------------------------------------
+// >>> [NL] Style Checklist
+// [X] Variables and helper methods named and used well
+// [ ] Proper and consistent indentation and spacing
+// [X] Proper JavaDocs provided for ALL methods
+// [ ] Any inline comments are necessary/make sense
+// [ ] Code repetition is kept to a minimum
+// ---------------------------------------------------
+// Correctness:         25 / 100   (-3 / missed unit test)
+// Style Penalty:       -5
+// Late Penalty:		-0 		 
+// Total:               20 / 100
+// ===================================================
