@@ -12,18 +12,24 @@ class hw1{
 	 */
 	public static int fibonacci(int num) {
 		
-		if (num == 1){;
-			return 1;
-		}
-		if (num == 2){
+		if (num == 1 || num == 2){;
 			return 1;
 		}
 // >>> [NL] These if statements can be combined to be one else if using `||`. (-1)
-		else{
-			return fibonacci(num - 1) + fibonacci(num - 2);
+		int before = 1;
+		int after = 1;
+		int fib = before + after;
+		for(int i = 2; i < num; i++) {
+			int next_num = before;
+			before = after;
+			after = next_num;
 			
 		}
+		
+		return fib;
+				
 	}
+	
 	
 	
 	
@@ -40,19 +46,20 @@ class hw1{
 	 * @return Sorted version of stringToSort
 	 */
 	public static String sorter(String stringToSort) {
-		//if (stringToSort = "" != null) {
 // >>> [NL] Don't leave commented-out code in your final submission! (-1)
-		new String sorts = stringToSort.charAt(0);
-		for (int i = 0; i< stringToSort.length(); i++)  {
-			if (stringToSort.charAt(i) < stringToSort.charAt(i + 1) {
-				sorts.charAt(i) = stringToSort.charAt(i);
-			else
-				sorts.charAt(i + 1) = stringToSort.charAt(i + 1);
-			
-		
-		
-		return sorts;	
-	}
+		char[] sorted = stringToSort.toCharArray();
+			for(int i = 0; i < (sorted.length - 1); i++) {
+				for(int j = i + 1; j > 0; j--) {
+					if(sorted[j] < sorted[j-1]) {
+						char t = sorted[j - 1];
+						sorted[j-1] = sorted[j];
+						sorted[j] = t;
+					}
+				}
+			}
+		stringToSort = String.valueOf(sorted);
+		return stringToSort;
+		}
 	
 
 	
@@ -84,20 +91,39 @@ class hw1{
 	 * @return Return our input string but in pig latin
 	 */
 	public static String pigLatin(String sentence) {
-		//String vowels = "aeiou";
-		for (int i = 0; i < sentence.length(); i++) {
-		if (sentence.charAt(i) && sentence.charAt(i + 1) == "a" || "e" || "i" || "o" || "u") {
 // >>> [NL] You can't check if something equals multiple things the way you can in Python.
 // You need to set it equal in each || statement. (No point deduction)
-			new String sent = sentence
-			sent
-			}
+		int size = sentence.length();
+		String pigL = ""; 
+		int i;
+		for(i = 0; i < size; i++) {
+			if(isVowel(sentence.charAt(i))) {
+		             break;
+		     }
+		 }
+		 if( i == size) {
+		      return "";
+		 }
+		   
+		 pigL = sentence.substring(i);
+		 pigL = pigL + sentence.substring(0, i - 0);
+		 pigL = pigL + "ay";
+		 return pigL;
+		
+	}
+	
+	 public static Boolean isVowel(char c) {
+	     if(c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' ||
+	        c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U') {
+	       
+	        return true;
+	       
+	     }return false;
+	 }
+
 				
 			
-// >>> [NL] Please make sure your final submission compiles!
-		}
-		return sentence;
-	}
+
 	
 	
 	
@@ -112,16 +138,15 @@ class hw1{
 	 *  @return True if the array has a triple, otherwise false
 	 */
 	public static boolean hasTriple(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == arr[i + 1] && arr[i] == arr[i + 2]) {
-				i++;
-				return true;
-			else {
-				return false;
-	}
-			}
-	}
-	}
+		int i = 0;
+		while( i < arr.length) {
+			i ++;
+			return (arr[i] == arr[i + 1] && arr[i] == arr[i + 2]); 	
+		}return false;
+	} 
+		
+	
+
 // >>> [NL] Make sure your brackets line up. (-1)
 	
 	/** 
@@ -134,9 +159,12 @@ class hw1{
 	 * @return True if num is a prime, otherwise false
 	 */
 	public static boolean isPrime(int num) {
-		// TODO
-// >>> [NL] Don't leave TODO comments in your final submission! (-1)
+	int i = 2;
+	if (num % 2 == 0 && num % i+1 == 0) {
 		return false;
+	}
+// >>> [NL] Don't leave TODO comments in your final submission! (-1)
+		return true;
 	}
 	
 	
