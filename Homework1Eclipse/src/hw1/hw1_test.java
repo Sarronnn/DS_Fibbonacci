@@ -13,13 +13,16 @@ public class hw1_test {
 	public void test_fibonacci1() {
 		assertTrue(hw1.fibonacci(1) ==  1);
 		assertFalse(hw1.fibonacci(1) ==  3);
-		assertTrue(hw1.fibonacci(3) == 2);
+		
 	}
 
 	@Test
 	public void test_fibonacci2() {
 		assertTrue(hw1.fibonacci(60) ==  1820529360);
-		assertTrue(hw1.fibonacci(10) == 55);
+	}
+	@Test
+	public void test_fibonacci3() {
+		assertTrue(hw1.fibonacci(3) == 2);
 	}
 	
 	@Test
@@ -32,6 +35,10 @@ public class hw1_test {
 	public void test_sorter2() {
 		String sent2 = "h311o";
 		assertTrue(hw1.sorter(sent2).equals("113ho"));	
+	}
+	public void test_sorter3() {
+		String sent4 = "apple";
+		assertTrue(hw1.sorter(sent4).equals("aelpp"));
 	}
 	
 	
